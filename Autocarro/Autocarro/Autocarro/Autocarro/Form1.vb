@@ -1,4 +1,5 @@
-﻿Imports System.Management
+﻿Imports System.IO
+Imports System.Management
 Imports System.Runtime.InteropServices
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Bunifu.Framework.[Lib]
@@ -230,6 +231,18 @@ Public Class Form1
 
     End Sub
     Sub compra(ByVal sender As Object, e As EventArgs)
+        Dim lugares(8) As String
+        Dim cont As Integer = 0
+        Dim linha As Integer = 0
+
+
+        Using reader As New StreamReader("lugares.txt")
+            While Not reader.EndOfStream
+                lugares(linha) = reader.ReadLine()
+                linha += 1
+            End While
+        End Using
+
         If conter_select = 0 Then
             MsgBox("Selecione o/os lugare/s que pretende comprar!")
         ElseIf textbox_gmail.Text = "Gmail" Or textbox_telemovel.Text = "Telemovel" Then
@@ -237,10 +250,11 @@ Public Class Form1
         ElseIf Not textbox_gmail.Text.Contains("@gmail.com") Then
             MessageBox.Show("Por favor insira um Gmail valido!")
         Else
-
             For i = 0 To 8
                 For j = 0 To 3
                     If lugares_button(i, j).Tag = 2 Or lugares_button(i, j).Tag = 4 Then
+                        lugares(i) = lugares(i).Substring(0, j) & "1" & lugares(i).Substring(j + 1)
+                        cont += 1
                         lugares_button(i, j).Tag = 1
                         lugares_button(i, j).Image = My.Resources.not_seat
                         lugares_button(i, j).Cursor = Cursors.No
@@ -248,6 +262,14 @@ Public Class Form1
                     End If
                 Next
             Next
+
+
+            Using writer As New StreamWriter("lugares.txt", False)
+                For i = 0 To 8
+                    writer.WriteLine(lugares(i))
+                Next
+            End Using
+
             conter_select = 0
             valor = 0
             label_selecionados.Text = "Nº de lugares selecionados : " & conter_select
@@ -256,9 +278,10 @@ Public Class Form1
             textbox_gmail.Text = "Telemovel"
             MsgBox("Compra executada com sucesso!")
             MsgBox("Verifique o seu Gmail com o Codigo QR!")
-
         End If
     End Sub
+
+
 
     Sub Selected(ByVal sender As Object, e As EventArgs)
         If sender.tag = 0 Then
