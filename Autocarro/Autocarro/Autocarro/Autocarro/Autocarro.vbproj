@@ -136,5 +136,47 @@
   <ItemGroup>
     <None Include="Resources\seats.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autocarro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autocarro2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus-ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\condutor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envelope.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escadas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not_seat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Race Car Sound Effect For Download.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

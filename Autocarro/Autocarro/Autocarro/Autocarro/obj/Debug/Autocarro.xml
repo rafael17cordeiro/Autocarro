@@ -22,9 +22,64 @@ Autocarro
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Autocarro.My.Resources.Resources.autocarro">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.autocarro2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.bus">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.bus_ticket">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.check_mark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.circle">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.condutor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.envelope">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.escadas">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.not_seat">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.phone">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Autocarro.My.Resources.Resources.seats">
 <summary>
-  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 </members>

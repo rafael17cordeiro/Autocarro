@@ -14,3 +14,18 @@ C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autoca
 C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.xml
 C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.pdb
 C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.Form_inicial.resources
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\bin\Debug\Autocarro.exe.config
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\bin\Debug\Autocarro.exe
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\bin\Debug\Autocarro.pdb
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\bin\Debug\Autocarro.xml
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.vbproj.AssemblyReference.cache
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.vbproj.SuggestedBindingRedirects.cache
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.Form1.resources
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.Form_inicial.resources
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.Resources.resources
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.vbproj.GenerateResource.cache
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.vbproj.CoreCompileInputs.cache
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.vbproj.CopyComplete
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.exe
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.xml
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.pdb

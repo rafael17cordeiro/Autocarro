@@ -1,5 +1,6 @@
 ﻿Imports System.Management
 Imports System.Runtime.InteropServices
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Bunifu.Framework.[Lib]
 Imports Bunifu.Framework.UI
 Imports Microsoft.Win32
@@ -124,7 +125,7 @@ Public Class Form1
 
 
         '--------------------Imagem bus ticket ------------------
-        icon_compra.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\bus-ticket.png")
+        icon_compra.Image = My.Resources.bus_ticket
         icon_compra.SizeMode = PictureBoxSizeMode.StretchImage
         icon_compra.Size = New Size(55, 55)
         icon_compra.Location = New Point(600, 38)
@@ -132,14 +133,14 @@ Public Class Form1
 
 
 
-        icon_gmail.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\envelope.png")
+        icon_gmail.Image = My.Resources.envelope
         icon_gmail.SizeMode = PictureBoxSizeMode.StretchImage
         icon_gmail.Size = New Size(35, 35)
         icon_gmail.Location = New Point(650, 225)
         Me.Controls.Add(icon_gmail)
 
 
-        icon_phone.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\phone.png")
+        icon_phone.Image = My.Resources.phone
         icon_phone.SizeMode = PictureBoxSizeMode.StretchImage
         icon_phone.Size = New Size(35, 35)
         icon_phone.Location = New Point(650, 280)
@@ -148,7 +149,7 @@ Public Class Form1
 
 
         '--------------------Imagem condutor------
-        condutor.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\condutor.png")
+        condutor.Image = My.Resources.condutor
         condutor.SizeMode = PictureBoxSizeMode.StretchImage
         condutor.Size = New Size(55, 55)
         condutor.Location = New Point(170, 450)
@@ -156,7 +157,7 @@ Public Class Form1
 
 
         '--------------------Imagem close icon ------------------
-        close.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\circle.png")
+        close.Image = My.Resources.circle
         close.SizeMode = PictureBoxSizeMode.StretchImage
         close.Size = New Size(45, 45)
         close.Location = New Point(730, 10)
@@ -166,7 +167,7 @@ Public Class Form1
         AddHandler close.Click, AddressOf Closer
 
         '--------------------Imagem escadas ------------------
-        escadas.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\escadas.png")
+        escadas.Image = My.Resources.escadas
         escadas.SizeMode = PictureBoxSizeMode.StretchImage
         escadas.Size = New Size(65, 65)
         escadas.Location = New Point(30, 450)
@@ -193,31 +194,34 @@ Public Class Form1
                 lugares_button(i, j) = New BunifuImageButton
                 lugares_button(i, j).Cursor = Cursors.Hand
                 lugares_button(i, j).BackColor = Color.Transparent
-                lugares_button(i, j).Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\seats.ico")
+                lugares_button(i, j).Image = My.Resources.seats
                 lugares_button(i, j).Size = New Size(35, 35)
                 lugares_button(i, j).Location = New Point(x, y)
-                lugares_button(i, j).Tag = 0
+
+                If j = 0 Or j = 3 Then
+                    lugares_button(i, j).Tag = 3 'preço é 30
+                Else
+                    lugares_button(i, j).Tag = 0 'preço é 15
+                End If
+
                 If j > 1 And i = 3 Then
                     lugares_button(i, j).Visible = False
                 End If
 
                 If j = 1 Then
                     x += 30
-
                 End If
+
                 If str_lugares(i)(j) = "1" Then
-                    lugares_button(i, j).Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\not_seat.png")
+                    lugares_button(i, j).Image = My.Resources.not_seat
                     lugares_button(i, j).Cursor = Cursors.No
                     lugares_button(i, j).Tag = 1
-
-                End If
-                If j = 0 Or j = 3 Then
-                    lugares_button(i, j).Tag = 3
                 End If
 
                 Me.Controls.Add(lugares_button(i, j))
                 AddHandler lugares_button(i, j).Click, AddressOf Selected
             Next
+
         Next
 
 
@@ -228,52 +232,74 @@ Public Class Form1
             MsgBox("Selecione o/os lugare/s que pretende comprar!")
         ElseIf textbox_gmail.Text = "Gmail" Or textbox_telemovel.Text = "Telemovel" Then
             MsgBox("preencha todas as informações!")
+        ElseIf Not textbox_gmail.Text.Contains("@gmail.com") Then
+            MessageBox.Show("Por favor insira um Gmail valido!")
         Else
-            MsgBox("compra executada com sucesso")
+
+            For i = 0 To 8
+                For j = 0 To 3
+                    If lugares_button(i, j).Tag = 2 Or lugares_button(i, j).Tag = 4 Then
+                        lugares_button(i, j).Tag = 1
+                        lugares_button(i, j).Image = My.Resources.not_seat
+                        lugares_button(i, j).Cursor = Cursors.No
+                        lugares_button(i, j).Tag = 1
+                    End If
+                Next
+            Next
+            conter_select = 0
+            valor = 0
+            label_selecionados.Text = "Nº de lugares selecionados : " & conter_select
+            label_valor.Text = "valor : " & valor & " $"
+            textbox_gmail.Text = "Gmail"
+            textbox_gmail.Text = "Telemovel"
+            MsgBox("Compra executada com sucesso!")
+            MsgBox("Verifique o seu Gmail com o Codigo QR!")
 
         End If
     End Sub
+
     Sub Selected(ByVal sender As Object, e As EventArgs)
         If sender.tag = 0 Then
             sender.tag = 2
-            sender.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\check-mark.png")
+            sender.Image = My.Resources.check_mark
             conter_select += 1
             label_selecionados.Text = "Nº de lugares selecionados : " & conter_select
-
-            For i = 0 To conter_select
-
-                valor = conter_select * 15
-                label_valor.Text = "valor : " & valor & " $"
+            valor += 15
+            label_valor.Text = "valor : " & valor & " $"
 
 
-            Next
         ElseIf sender.tag = 2 Then
-            sender.image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\seats.ico")
+            sender.image = My.Resources.seats
             sender.tag = 0
             conter_select -= 1
             label_selecionados.Text = "Nº de lugares selecionados : " & conter_select
             valor -= 15
-            For i = 0 To conter_select
-                valor = conter_select * 15
-                label_valor.Text = "valor : " & valor & " $"
-            Next
+            label_valor.Text = "valor : " & valor & " $"
+
+
         ElseIf sender.tag = 3 Then
-            sender.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\check-mark.png")
+            sender.tag = 4
+            sender.Image = My.Resources.check_mark
             conter_select += 1
             label_selecionados.Text = "Nº de lugares selecionados : " & conter_select
-
-            For i = 0 To conter_select
-
-                valor = conter_select * 30
-                label_valor.Text = "valor : " & valor & " $"
+            valor += 30
+            label_valor.Text = "valor : " & valor & " $"
 
 
-            Next
+        ElseIf sender.tag = 4 Then
+            sender.image = My.Resources.seats
+            sender.tag = 3
+            conter_select -= 1
+            label_selecionados.Text = "Nº de lugares selecionados : " & conter_select
+            valor -= 30
+            label_valor.Text = "valor : " & valor & " $"
+
 
         ElseIf sender.tag = 1 Then
-            MsgBox("O Lugar escolhido já está ocupado")
+            MsgBox("O Lugar escolhido já está ocupado ")
         End If
     End Sub
+
 
 
     Sub Closer(ByVal sender As Object, e As EventArgs)

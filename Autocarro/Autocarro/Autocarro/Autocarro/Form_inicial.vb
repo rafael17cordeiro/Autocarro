@@ -1,4 +1,5 @@
-﻿Imports System.Runtime.InteropServices
+﻿Imports System.Media
+Imports System.Runtime.InteropServices
 Imports System.Threading
 Imports System.Timers
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip
@@ -50,7 +51,7 @@ Public Class Form_inicial
         Me.BackColor = Color.FromArgb(20, 30, 48)
         Me.StartPosition = FormStartPosition.CenterScreen
 
-        close.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\circle.png")
+        close.Image = My.Resources.circle
         close.SizeMode = PictureBoxSizeMode.StretchImage
         close.Size = New Size(45, 45)
         close.Location = New Point(730, 10)
@@ -63,21 +64,21 @@ Public Class Form_inicial
 
 
 
-        autocarro1.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\autocarro.png")
+        autocarro1.Image = My.Resources.autocarro
         autocarro1.SizeMode = PictureBoxSizeMode.StretchImage
         autocarro1.Size = New Size(250, 180)
         autocarro1.Location = New Point(10, 200)
         Me.Controls.Add(autocarro1)
 
 
-        autocarro2.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\autocarro2.png")
+        autocarro2.Image = My.Resources.autocarro2
         autocarro2.SizeMode = PictureBoxSizeMode.StretchImage
         autocarro2.Size = New Size(250, 180)
         autocarro2.Location = New Point(530, 200)
         Me.Controls.Add(autocarro2)
 
 
-        autocarro_pequeno.Image = Image.FromFile("C:\Users\Rafael\Desktop\Autocarro\Autocarro\Autocarro\Autocarro\Resources\bus.png")
+        autocarro_pequeno.Image = My.Resources.bus
         autocarro_pequeno.SizeMode = PictureBoxSizeMode.StretchImage
         autocarro_pequeno.Size = New Size(70, 70)
         autocarro_pequeno.Location = New Point(10, 488)
@@ -130,6 +131,7 @@ Public Class Form_inicial
     Sub Show_form1(ByVal sender As Object, e As EventArgs)
         Timer1.Interval = 5
         Timer1.Start()
+
 
     End Sub
 
