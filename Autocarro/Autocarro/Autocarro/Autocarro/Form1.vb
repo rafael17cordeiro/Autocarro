@@ -47,7 +47,7 @@ Public Class Form1
         Dim icon_gmail As New PictureBox
         Dim label_compra As New Label
         Dim close As New PictureBox
-        Dim condutor As New PictureBox
+        Dim condutor As New BunifuImageButton
         Dim escadas As New PictureBox
         Dim icon_phone As New PictureBox
         Dim comprar_button As New BunifuThinButton2
@@ -153,6 +153,8 @@ Public Class Form1
         condutor.SizeMode = PictureBoxSizeMode.StretchImage
         condutor.Size = New Size(55, 55)
         condutor.Location = New Point(170, 450)
+        condutor.BackColor = Color.Transparent
+        close.Cursor = Cursors.Hand
         Me.Controls.Add(condutor)
 
 
@@ -167,11 +169,11 @@ Public Class Form1
         AddHandler close.Click, AddressOf Closer
 
         '--------------------Imagem escadas ------------------
-        escadas.Image = My.Resources.escadas
-        escadas.SizeMode = PictureBoxSizeMode.StretchImage
-        escadas.Size = New Size(65, 65)
-        escadas.Location = New Point(30, 450)
-        Me.Controls.Add(escadas)
+        'escadas.Image = My.Resources.escadas
+        'escadas.SizeMode = PictureBoxSizeMode.StretchImage
+        'escadas.Size = New Size(65, 65)
+        'escadas.Location = New Point(30, 450)
+        'Me.Controls.Add(escadas)
 
 
 
