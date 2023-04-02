@@ -119,6 +119,7 @@ Public Class Form_inicial
         botao2.Size = New Size(200, 50)
         botao2.ButtonText = "Administração"
         Me.Controls.Add(botao2)
+        AddHandler botao2.Click, AddressOf Show_form_admin
 
 
     End Sub
@@ -135,6 +136,12 @@ Public Class Form_inicial
 
     End Sub
 
+    Sub Show_form_admin(ByVal sender As Object, e As EventArgs)
+        Form_admin.Show()
+
+
+    End Sub
+
     Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
         For i = 0 To 10
             autocarro_pequeno.Left += 1
@@ -145,6 +152,7 @@ Public Class Form_inicial
             Timer1.Stop()
             If Timer1.Enabled = False Then
                 Form1.Show()
+                autocarro_pequeno.Location = New Point(10, 488)
             End If
         End If
     End Sub

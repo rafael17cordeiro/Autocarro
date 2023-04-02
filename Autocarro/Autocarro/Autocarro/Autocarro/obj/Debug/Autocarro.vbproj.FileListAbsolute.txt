@@ -29,3 +29,4 @@ C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autoca
 C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.exe
 C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.xml
 C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.pdb
+C:\Users\rafae\OneDrive\Ambiente de Trabalho\autocaro\Autocarro\Autocarro\Autocarro\Autocarro\obj\Debug\Autocarro.Form_admin.resources

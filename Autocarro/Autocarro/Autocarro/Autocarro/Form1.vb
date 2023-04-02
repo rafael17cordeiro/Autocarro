@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.Diagnostics.Eventing
+Imports System.IO
 Imports System.Management
 Imports System.Runtime.InteropServices
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
@@ -236,12 +237,12 @@ Public Class Form1
         Dim linha As Integer = 0
 
 
-        Using reader As New StreamReader("lugares.txt")
-            While Not reader.EndOfStream
-                lugares(linha) = reader.ReadLine()
-                linha += 1
-            End While
-        End Using
+        FileOpen(1, "lugares.txt", OpenMode.Input)
+        While Not EOF(1)
+            lugares(linha) = LineInput(1)
+            linha += 1
+        End While
+        FileClose(1)
 
         If conter_select = 0 Then
             MsgBox("Selecione o/os lugare/s que pretende comprar!")
@@ -263,21 +264,25 @@ Public Class Form1
                 Next
             Next
 
+            FileOpen(2, "lugares.txt", OpenMode.Output)
+            For i = 0 To 8
+                PrintLine(2, lugares(i))
+            Next
+            FileClose(2)
 
-            Using writer As New StreamWriter("lugares.txt", False)
-                For i = 0 To 8
-                    writer.WriteLine(lugares(i))
-                Next
-            End Using
+            FileOpen(1, "vendas.txt", OpenMode.Append)
+            Print(1, textbox_gmail.Text & "," & textbox_telemovel.Text & "," & conter_select & " lugares" & vbNewLine)
+            FileClose(1)
 
             conter_select = 0
             valor = 0
             label_selecionados.Text = "Nº de lugares selecionados : " & conter_select
             label_valor.Text = "valor : " & valor & " $"
             textbox_gmail.Text = "Gmail"
-            textbox_gmail.Text = "Telemovel"
+            textbox_telemovel.Text = "Telemovel"
             MsgBox("Compra executada com sucesso!")
             MsgBox("Verifique o seu Gmail com o Codigo QR!")
+            Me.Close()
         End If
     End Sub
 
