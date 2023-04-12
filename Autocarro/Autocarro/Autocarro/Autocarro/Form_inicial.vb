@@ -137,7 +137,7 @@ Public Class Form_inicial
     End Sub
 
     Sub Show_form_admin(ByVal sender As Object, e As EventArgs)
-        Form_admin.Show()
+        Form_entrarAdm.Show()
 
 
     End Sub

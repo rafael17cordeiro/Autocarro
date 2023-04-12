@@ -90,6 +90,12 @@
     <Compile Include="Form_admin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_entrarAdm.Designer.vb">
+      <DependentUpon>Form_entrarAdm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_entrarAdm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_inicial.Designer.vb">
       <DependentUpon>Form_inicial.vb</DependentUpon>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_admin.resx">
       <DependentUpon>Form_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_entrarAdm.resx">
+      <DependentUpon>Form_entrarAdm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_inicial.resx">
       <DependentUpon>Form_inicial.vb</DependentUpon>

@@ -271,7 +271,7 @@ Public Class Form1
             FileClose(2)
 
             FileOpen(1, "vendas.txt", OpenMode.Append)
-            Print(1, textbox_gmail.Text & "," & textbox_telemovel.Text & "," & conter_select & " lugares" & vbNewLine)
+            Print(1, textbox_gmail.Text & "," & textbox_telemovel.Text & "," & conter_select & " lugares" & "," & valor & "$" & vbNewLine)
             FileClose(1)
 
             conter_select = 0
