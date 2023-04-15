@@ -1,4 +1,8 @@
-﻿Public Class Form_entrarAdm
+﻿Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class Form_entrarAdm
+    Dim pass As String
     Private Function RoundedRectangle(rect As RectangleF, diam As Single) As Drawing2D.GraphicsPath
         Dim path As New Drawing2D.GraphicsPath
         path.AddArc(rect.Left, rect.Top, diam, diam, 180, 90)
@@ -28,5 +32,13 @@
 
             .Region = New Region(RoundedRectangle(.ClientRectangle, 50))
         End With
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub BunifuThinButton21_Click(sender As Object, e As EventArgs) Handles BunifuThinButton21.Click
+
     End Sub
 End Class

@@ -196,5 +196,8 @@
   <ItemGroup>
     <None Include="Resources\sound.mp3" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-ui.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
