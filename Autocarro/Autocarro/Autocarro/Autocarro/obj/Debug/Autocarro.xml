@@ -37,6 +37,11 @@ Autocarro
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Autocarro.My.Resources.Resources.broom">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Autocarro.My.Resources.Resources.bus">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -47,7 +52,17 @@ Autocarro
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Autocarro.My.Resources.Resources.check">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Autocarro.My.Resources.Resources.check_mark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.checked">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -57,7 +72,17 @@ Autocarro
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Autocarro.My.Resources.Resources.clipboard">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Autocarro.My.Resources.Resources.condutor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.dinheiro">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -68,6 +93,21 @@ Autocarro
 </summary>
 </member>
 <member name="P:Autocarro.My.Resources.Resources.escadas">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.hide">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.lock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.logout">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -83,6 +123,16 @@ Autocarro
 </summary>
 </member>
 <member name="P:Autocarro.My.Resources.Resources.seats">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.view__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Autocarro.My.Resources.Resources.view__1_1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

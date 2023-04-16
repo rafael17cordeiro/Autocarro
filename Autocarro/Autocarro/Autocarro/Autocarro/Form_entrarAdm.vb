@@ -1,8 +1,9 @@
 ﻿Imports System.IO
+Imports System.Windows
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form_entrarAdm
-    Dim pass As String
+
     Private Function RoundedRectangle(rect As RectangleF, diam As Single) As Drawing2D.GraphicsPath
         Dim path As New Drawing2D.GraphicsPath
         path.AddArc(rect.Left, rect.Top, diam, diam, 180, 90)
@@ -39,6 +40,39 @@ Public Class Form_entrarAdm
     End Sub
 
     Private Sub BunifuThinButton21_Click(sender As Object, e As EventArgs) Handles BunifuThinButton21.Click
+        Dim ut_pass As String = BunifuMetroTextbox1.Text
+        Dim ficheiro_pass As String
+        FileOpen(1, "admin.txt", OpenMode.Input)
+        ficheiro_pass = LineInput(1)
+        FileClose(1)
+        If ficheiro_pass = ut_pass Then
+            Form_admin.Show()
+            Form_inicial.Hide()
+            Me.Hide()
+            BunifuMetroTextbox1.Text = ""
+        Else
+            MsgBox("Password incorreta")
+            BunifuMetroTextbox1.Text = ""
+        End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub PictureBox3_Click_1(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        BunifuMetroTextbox1.isPassword = False
+        PictureBox4.Visible = True
+        PictureBox3.Visible = False
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        BunifuMetroTextbox1.isPassword = True
+        PictureBox4.Visible = False
+        PictureBox3.Visible = True
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 End Class

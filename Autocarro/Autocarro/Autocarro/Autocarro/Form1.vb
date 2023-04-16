@@ -53,7 +53,7 @@ Public Class Form1
         Dim escadas As New PictureBox
         Dim icon_phone As New PictureBox
         Dim comprar_button As New BunifuThinButton2
-
+        Dim total As Integer
 
         Me.AutoSize = False
         Me.FormBorderStyle = FormBorderStyle.None
@@ -63,7 +63,7 @@ Public Class Form1
 
 
 
-        label_compra.Font = New Font("Century Gothic", 22, FontStyle.Bold)
+        label_compra.Font = New Font("Satoshi", 22, FontStyle.Bold)
         label_compra.Size = New Size(255, 50)
         label_compra.Cursor = Cursors.Hand
 
@@ -73,7 +73,7 @@ Public Class Form1
         Me.Controls.Add(label_compra)
 
 
-        textbox_gmail.Font = New Font("Century Gothic", 11)
+        textbox_gmail.Font = New Font("Satoshi", 11)
         textbox_gmail.Cursor = Cursors.Hand
         textbox_gmail.Location = New Point(340, 220)
         textbox_gmail.LineFocusedColor = Color.White
@@ -83,7 +83,7 @@ Public Class Form1
         textbox_gmail.Size = New Size(300, 40)
         Me.Controls.Add(textbox_gmail)
 
-        textbox_telemovel.Font = New Font("Century Gothic", 11)
+        textbox_telemovel.Font = New Font("Satoshi", 11)
         textbox_telemovel.Cursor = Cursors.Hand
         textbox_telemovel.Location = New Point(340, 280)
         textbox_telemovel.LineFocusedColor = Color.White
@@ -93,6 +93,10 @@ Public Class Form1
         textbox_telemovel.Text = "Telemovel"
         Me.Controls.Add(textbox_telemovel)
 
+
+
+
+        comprar_button.Font = New Font("Satoshi", 12)
         comprar_button.Location = New Point(340, 340)
         comprar_button.BackColor = Color.Transparent
         comprar_button.IdleFillColor = Color.FromArgb(20, 30, 48)
@@ -106,18 +110,18 @@ Public Class Form1
         Me.Controls.Add(comprar_button)
         AddHandler comprar_button.Click, AddressOf compra
 
-        label_selecionados.Font = New Font("Century Gothic", 16)
+        label_selecionados.Font = New Font("Satoshi", 16)
         label_selecionados.Size = New Size(400, 30)
         label_selecionados.Cursor = Cursors.Hand
         label_selecionados.Location = New Point(340, 130)
         label_selecionados.ForeColor = Color.White
-        label_selecionados.Text = "Nº de lugares selecionados : " & conter_select
+        label_selecionados.Text = "lugares selecionados : " & conter_select
         Me.Controls.Add(label_selecionados)
 
 
 
 
-        label_valor.Font = New Font("Century Gothic", 16)
+        label_valor.Font = New Font("Satoshi", 16)
         label_valor.Size = New Size(400, 30)
         label_valor.Cursor = Cursors.Hand
         label_valor.Location = New Point(340, 160)
@@ -249,7 +253,7 @@ Public Class Form1
         ElseIf textbox_gmail.Text = "Gmail" Or textbox_telemovel.Text = "Telemovel" Then
             MsgBox("preencha todas as informações!")
         ElseIf Not textbox_gmail.Text.Contains("@gmail.com") Then
-            MessageBox.Show("Por favor insira um Gmail valido!")
+            MsgBox("Por favor insira um Gmail valido!")
         Else
             For i = 0 To 8
                 For j = 0 To 3
@@ -273,6 +277,31 @@ Public Class Form1
             FileOpen(1, "vendas.txt", OpenMode.Append)
             Print(1, textbox_gmail.Text & "," & textbox_telemovel.Text & "," & conter_select & " lugares" & "," & valor & "$" & vbNewLine)
             FileClose(1)
+
+
+            FileOpen(3, "total.txt", OpenMode.Input)
+
+            If Not EOF(3) Then
+                Dim str As String = LineInput(3)
+                Dim total As Integer
+                If Integer.TryParse(str, total) Then
+                    total += valor
+                Else
+                    total = valor
+                End If
+                FileClose(3)
+
+                FileOpen(3, "total.txt", OpenMode.Output)
+                PrintLine(3, total & "$")
+                FileClose(3)
+            Else
+
+                FileClose(3)
+
+                FileOpen(3, "total.txt", OpenMode.Output)
+                PrintLine(3, valor & "$")
+                FileClose(3)
+            End If
 
             conter_select = 0
             valor = 0

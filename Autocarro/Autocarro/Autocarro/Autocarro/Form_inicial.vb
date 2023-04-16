@@ -85,7 +85,7 @@ Public Class Form_inicial
         Me.Controls.Add(autocarro_pequeno)
         AddHandler autocarro_pequeno.Click, AddressOf Show_form1
 
-        label_tit.Font = New Font("Century Gothic", 36, FontStyle.Bold)
+        label_tit.Font = New Font("Satoshi", 36, FontStyle.Bold)
         label_tit.Size = New Size(400, 70)
 
         label_tit.Cursor = Cursors.Hand
@@ -93,7 +93,7 @@ Public Class Form_inicial
         label_tit.ForeColor = Color.White
         label_tit.Text = "Easy Buzz Leiria"
         Me.Controls.Add(label_tit)
-
+        botao1.Font = New Font("Satoshi", 12)
         botao1.Location = New Point(290, 240)
         botao1.BackColor = Color.Transparent
         botao1.IdleFillColor = Color.FromArgb(20, 30, 48)
@@ -107,7 +107,7 @@ Public Class Form_inicial
         Me.Controls.Add(botao1)
 
         AddHandler botao1.Click, AddressOf Show_form1
-
+        botao2.Font = New Font("Satoshi", 12)
         botao2.Location = New Point(290, 310)
         botao2.BackColor = Color.Transparent
         botao2.IdleFillColor = Color.FromArgb(20, 30, 48)
