@@ -279,29 +279,32 @@ Public Class Form1
             FileClose(1)
 
 
-            FileOpen(3, "total.txt", OpenMode.Input)
+            Dim fileNum As Integer = FreeFile()
+            FileOpen(fileNum, "total.txt", OpenMode.Input)
 
-            If Not EOF(3) Then
-                Dim str As String = LineInput(3)
+            If Not EOF(fileNum) Then
+                Dim str As String = LineInput(fileNum)
                 Dim total As Integer
                 If Integer.TryParse(str, total) Then
                     total += valor
                 Else
                     total = valor
                 End If
-                FileClose(3)
+                FileClose(fileNum)
 
-                FileOpen(3, "total.txt", OpenMode.Output)
-                PrintLine(3, total & "$")
-                FileClose(3)
+                fileNum = FreeFile()
+                FileOpen(fileNum, "total.txt", OpenMode.Output)
+                PrintLine(fileNum, total & "$")
+                FileClose(fileNum)
             Else
+                FileClose(fileNum)
 
-                FileClose(3)
-
-                FileOpen(3, "total.txt", OpenMode.Output)
-                PrintLine(3, valor & "$")
-                FileClose(3)
+                fileNum = FreeFile()
+                FileOpen(fileNum, "total.txt", OpenMode.Output)
+                PrintLine(fileNum, valor & "$")
+                FileClose(fileNum)
             End If
+
 
             conter_select = 0
             valor = 0
