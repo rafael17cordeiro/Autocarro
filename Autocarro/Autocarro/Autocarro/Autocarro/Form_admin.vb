@@ -80,5 +80,55 @@ Public Class Form_admin
 
     End Sub
 
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        Dim aux As Integer
+        Dim str_lugares(15) As String
+        Dim lugares_button(8, 3) As BunifuImageButton
+        Dim x As Integer
+        Dim y As Integer
+        FileOpen(1, "lugares.txt", OpenMode.Input)
+        While Not EOF(1)
+            str_lugares(aux) = LineInput(1)
+            aux += 1
+        End While
+        FileClose(1)
 
+        For i = 0 To 8
+            y += 45
+            x = 0
+            For j = 0 To 3
+                x += 40
+                lugares_button(i, j) = New BunifuImageButton
+                lugares_button(i, j).Cursor = Cursors.Hand
+                lugares_button(i, j).BackColor = Color.Transparent
+                lugares_button(i, j).Image = My.Resources.seats
+                lugares_button(i, j).Size = New Size(35, 35)
+                lugares_button(i, j).Location = New Point(x, y)
+
+                If j = 0 Or j = 3 Then
+                    lugares_button(i, j).Tag = 3 'preço é 30
+                Else
+                    lugares_button(i, j).Tag = 0 'preço é 15
+                End If
+
+                If j > 1 And i = 3 Then
+                    lugares_button(i, j).Visible = False
+                End If
+
+                If j = 1 Then
+                    x += 30
+                End If
+
+                If str_lugares(i)(j) = "1" Then
+                    lugares_button(i, j).Image = My.Resources.not_seat
+                    lugares_button(i, j).Cursor = Cursors.No
+                    lugares_button(i, j).Tag = 1
+                End If
+
+                Me.Controls.Add(lugares_button(i, j))
+                
+            Next
+
+        Next
+    End Sub
 End Class

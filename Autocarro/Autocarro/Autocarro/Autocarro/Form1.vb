@@ -53,7 +53,7 @@ Public Class Form1
         Dim escadas As New PictureBox
         Dim icon_phone As New PictureBox
         Dim comprar_button As New BunifuThinButton2
-        Dim total As Integer
+
 
         Me.AutoSize = False
         Me.FormBorderStyle = FormBorderStyle.None
@@ -278,12 +278,13 @@ Public Class Form1
             Print(1, textbox_gmail.Text & "," & textbox_telemovel.Text & "," & conter_select & " lugares" & "," & valor & "$" & vbNewLine)
             FileClose(1)
 
-
             Dim fileNum As Integer = FreeFile()
             FileOpen(fileNum, "total.txt", OpenMode.Input)
 
             If Not EOF(fileNum) Then
+
                 Dim str As String = LineInput(fileNum)
+                str = str.TrimEnd("$"c) ' remove o símbolo "$" do final da string
                 Dim total As Integer
                 If Integer.TryParse(str, total) Then
                     total += valor
@@ -297,6 +298,7 @@ Public Class Form1
                 PrintLine(fileNum, total & "$")
                 FileClose(fileNum)
             Else
+
                 FileClose(fileNum)
 
                 fileNum = FreeFile()
@@ -304,6 +306,8 @@ Public Class Form1
                 PrintLine(fileNum, valor & "$")
                 FileClose(fileNum)
             End If
+
+
 
 
             conter_select = 0
