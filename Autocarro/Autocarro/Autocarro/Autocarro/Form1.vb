@@ -274,9 +274,9 @@ Public Class Form1
             Next
             FileClose(2)
 
-            FileOpen(1, "vendas.txt", OpenMode.Append)
-            Print(1, textbox_gmail.Text & "," & textbox_telemovel.Text & "," & conter_select & " lugares" & "," & valor & "$" & vbNewLine)
-            FileClose(1)
+            FileOpen(19, "vendas.txt", OpenMode.Append)
+            Print(19, textbox_gmail.Text & "," & textbox_telemovel.Text & "," & conter_select & " lugares" & "," & valor & "$" & vbNewLine)
+            FileClose(19)
 
             Dim fileNum As Integer = FreeFile()
             FileOpen(fileNum, "total.txt", OpenMode.Input)

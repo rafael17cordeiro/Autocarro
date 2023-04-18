@@ -22,6 +22,8 @@ Partial Class Form_admin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_admin))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -45,6 +47,11 @@ Partial Class Form_admin
         Me.BunifuSeparator5 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.BunifuSeparator6 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BunifuThinButton22 = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.BunifuThinButton21 = New Bunifu.Framework.UI.BunifuThinButton2()
+        Me.BunifuCircleProgressbar1 = New Bunifu.Framework.UI.BunifuCircleProgressbar()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +60,7 @@ Partial Class Form_admin
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -152,7 +160,7 @@ Partial Class Form_admin
         Me.Panel1.Controls.Add(Me.BunifuSeparator6)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(279, 510)
+        Me.Panel1.Size = New System.Drawing.Size(279, 637)
         Me.Panel1.TabIndex = 8
         '
         'PictureBox7
@@ -270,9 +278,9 @@ Partial Class Form_admin
         Me.Label5.ForeColor = System.Drawing.Color.LightGray
         Me.Label5.Location = New System.Drawing.Point(18, 84)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(54, 16)
+        Me.Label5.Size = New System.Drawing.Size(53, 16)
         Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Options"
+        Me.Label5.Text = "Opções"
         '
         'PictureBox2
         '
@@ -322,21 +330,113 @@ Partial Class Form_admin
         '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.Color.White
         Me.TextBox1.Font = New System.Drawing.Font("Satoshi", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(308, 37)
+        Me.TextBox1.Location = New System.Drawing.Point(3, 3)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(451, 340)
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(477, 523)
         Me.TextBox1.TabIndex = 21
+        '
+        'Timer1
+        '
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.BunifuThinButton22)
+        Me.Panel2.Controls.Add(Me.BunifuThinButton21)
+        Me.Panel2.Controls.Add(Me.BunifuCircleProgressbar1)
+        Me.Panel2.Controls.Add(Me.TextBox1)
+        Me.Panel2.Location = New System.Drawing.Point(305, 42)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(483, 520)
+        Me.Panel2.TabIndex = 22
+        '
+        'BunifuThinButton22
+        '
+        Me.BunifuThinButton22.ActiveBorderThickness = 1
+        Me.BunifuThinButton22.ActiveCornerRadius = 20
+        Me.BunifuThinButton22.ActiveFillColor = System.Drawing.Color.IndianRed
+        Me.BunifuThinButton22.ActiveForecolor = System.Drawing.Color.White
+        Me.BunifuThinButton22.ActiveLineColor = System.Drawing.Color.IndianRed
+        Me.BunifuThinButton22.BackColor = System.Drawing.Color.White
+        Me.BunifuThinButton22.BackgroundImage = CType(resources.GetObject("BunifuThinButton22.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuThinButton22.ButtonText = "Cancelar"
+        Me.BunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuThinButton22.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuThinButton22.ForeColor = System.Drawing.Color.IndianRed
+        Me.BunifuThinButton22.IdleBorderThickness = 1
+        Me.BunifuThinButton22.IdleCornerRadius = 20
+        Me.BunifuThinButton22.IdleFillColor = System.Drawing.Color.White
+        Me.BunifuThinButton22.IdleForecolor = System.Drawing.Color.IndianRed
+        Me.BunifuThinButton22.IdleLineColor = System.Drawing.Color.IndianRed
+        Me.BunifuThinButton22.Location = New System.Drawing.Point(157, 472)
+        Me.BunifuThinButton22.Margin = New System.Windows.Forms.Padding(5)
+        Me.BunifuThinButton22.Name = "BunifuThinButton22"
+        Me.BunifuThinButton22.Size = New System.Drawing.Size(142, 48)
+        Me.BunifuThinButton22.TabIndex = 23
+        Me.BunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuThinButton22.Visible = False
+        '
+        'BunifuThinButton21
+        '
+        Me.BunifuThinButton21.ActiveBorderThickness = 1
+        Me.BunifuThinButton21.ActiveCornerRadius = 20
+        Me.BunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton21.ActiveForecolor = System.Drawing.Color.White
+        Me.BunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton21.BackColor = System.Drawing.Color.White
+        Me.BunifuThinButton21.BackgroundImage = CType(resources.GetObject("BunifuThinButton21.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuThinButton21.ButtonText = "Confirmar"
+        Me.BunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuThinButton21.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton21.IdleBorderThickness = 1
+        Me.BunifuThinButton21.IdleCornerRadius = 20
+        Me.BunifuThinButton21.IdleFillColor = System.Drawing.Color.White
+        Me.BunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen
+        Me.BunifuThinButton21.Location = New System.Drawing.Point(5, 472)
+        Me.BunifuThinButton21.Margin = New System.Windows.Forms.Padding(5)
+        Me.BunifuThinButton21.Name = "BunifuThinButton21"
+        Me.BunifuThinButton21.Size = New System.Drawing.Size(142, 48)
+        Me.BunifuThinButton21.TabIndex = 22
+        Me.BunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuThinButton21.Visible = False
+        '
+        'BunifuCircleProgressbar1
+        '
+        Me.BunifuCircleProgressbar1.animated = False
+        Me.BunifuCircleProgressbar1.animationIterval = 5
+        Me.BunifuCircleProgressbar1.animationSpeed = 300
+        Me.BunifuCircleProgressbar1.BackColor = System.Drawing.Color.White
+        Me.BunifuCircleProgressbar1.BackgroundImage = CType(resources.GetObject("BunifuCircleProgressbar1.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuCircleProgressbar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!)
+        Me.BunifuCircleProgressbar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.BunifuCircleProgressbar1.LabelVisible = True
+        Me.BunifuCircleProgressbar1.LineProgressThickness = 8
+        Me.BunifuCircleProgressbar1.LineThickness = 5
+        Me.BunifuCircleProgressbar1.Location = New System.Drawing.Point(157, 129)
+        Me.BunifuCircleProgressbar1.Margin = New System.Windows.Forms.Padding(10, 9, 10, 9)
+        Me.BunifuCircleProgressbar1.MaxValue = 100
+        Me.BunifuCircleProgressbar1.Name = "BunifuCircleProgressbar1"
+        Me.BunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.Gainsboro
+        Me.BunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.BunifuCircleProgressbar1.Size = New System.Drawing.Size(201, 201)
+        Me.BunifuCircleProgressbar1.TabIndex = 21
+        Me.BunifuCircleProgressbar1.Value = 0
+        Me.BunifuCircleProgressbar1.Visible = False
         '
         'Form_admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
-        Me.ClientSize = New System.Drawing.Size(781, 423)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(800, 600)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form_admin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -350,8 +450,9 @@ Partial Class Form_admin
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As Label
@@ -377,4 +478,9 @@ Partial Class Form_admin
     Friend WithEvents Label8 As Label
     Friend WithEvents BunifuSeparator6 As Bunifu.Framework.UI.BunifuSeparator
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents BunifuCircleProgressbar1 As Bunifu.Framework.UI.BunifuCircleProgressbar
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents BunifuThinButton22 As Bunifu.Framework.UI.BunifuThinButton2
+    Friend WithEvents BunifuThinButton21 As Bunifu.Framework.UI.BunifuThinButton2
 End Class
