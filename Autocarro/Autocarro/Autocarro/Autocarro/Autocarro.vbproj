@@ -238,5 +238,8 @@
   <ItemGroup>
     <None Include="Resources\indisponivel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indisponivel %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
