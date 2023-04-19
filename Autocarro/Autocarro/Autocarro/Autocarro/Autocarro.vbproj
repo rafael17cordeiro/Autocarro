@@ -235,5 +235,8 @@
   <ItemGroup>
     <None Include="Resources\cancelar %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indisponivel.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -112,6 +112,11 @@ Autocarro
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Autocarro.My.Resources.Resources.indisponivel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Autocarro.My.Resources.Resources.lock">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

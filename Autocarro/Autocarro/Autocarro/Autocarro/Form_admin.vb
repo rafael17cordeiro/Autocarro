@@ -246,13 +246,13 @@ Public Class Form_admin
         For i = 0 To 8
                 For j = 0 To 3
                     If lugares_button(i, j).Tag = 2 Or lugares_button(i, j).Tag = 4 Then
-                        lugares(i) = lugares(i).Substring(0, j) & "1" & lugares(i).Substring(j + 1)
-                        cont += 1
-                        lugares_button(i, j).Tag = 1
-                        lugares_button(i, j).Image = My.Resources.not_seat
-                        lugares_button(i, j).Cursor = Cursors.No
-                        lugares_button(i, j).Tag = 1
-                    End If
+                    lugares(i) = lugares(i).Substring(0, j) & "2" & lugares(i).Substring(j + 1)
+                    cont += 1
+                    lugares_button(i, j).Tag = 5
+                    lugares_button(i, j).Image = My.Resources.indisponivel
+                    lugares_button(i, j).Cursor = Cursors.No
+                    lugares_button(i, j).Tag = 5
+                End If
                 Next
             Next
 
@@ -280,5 +280,9 @@ Public Class Form_admin
                 lugares_button(i, j).Visible = False
             Next
         Next
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

@@ -31,28 +31,29 @@ Partial Class Form_admin
         Me.BunifuSeparator2 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BunifuSeparator4 = New Bunifu.Framework.UI.BunifuSeparator()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BunifuSeparator3 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.BunifuSeparator5 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.BunifuSeparator6 = New Bunifu.Framework.UI.BunifuSeparator()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BunifuThinButton22 = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.BunifuThinButton21 = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.BunifuCircleProgressbar1 = New Bunifu.Framework.UI.BunifuCircleProgressbar()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,7 +61,6 @@ Partial Class Form_admin
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -163,16 +163,6 @@ Partial Class Form_admin
         Me.Panel1.Size = New System.Drawing.Size(279, 637)
         Me.Panel1.TabIndex = 8
         '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = Global.Autocarro.My.Resources.Resources.clipboard
-        Me.PictureBox7.Location = New System.Drawing.Point(22, 247)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(26, 28)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 19
-        Me.PictureBox7.TabStop = False
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -197,16 +187,6 @@ Partial Class Form_admin
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "Limpar texto"
         '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.Autocarro.My.Resources.Resources.broom
-        Me.PictureBox6.Location = New System.Drawing.Point(24, 288)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(26, 31)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 15
-        Me.PictureBox6.TabStop = False
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -218,16 +198,6 @@ Partial Class Form_admin
         Me.Label6.Size = New System.Drawing.Size(66, 20)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Log out "
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Autocarro.My.Resources.Resources.logout
-        Me.PictureBox1.Location = New System.Drawing.Point(24, 352)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(26, 31)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
         '
         'BunifuSeparator4
         '
@@ -241,36 +211,6 @@ Partial Class Form_admin
         Me.BunifuSeparator4.Transparency = 255
         Me.BunifuSeparator4.Vertical = False
         '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.Autocarro.My.Resources.Resources.check
-        Me.PictureBox5.Location = New System.Drawing.Point(21, 117)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(26, 28)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 11
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Autocarro.My.Resources.Resources.lock
-        Me.PictureBox4.Location = New System.Drawing.Point(21, 197)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(26, 28)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 10
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Autocarro.My.Resources.Resources.dinheiro
-        Me.PictureBox3.Location = New System.Drawing.Point(21, 156)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(26, 28)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 9
-        Me.PictureBox3.TabStop = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -281,16 +221,6 @@ Partial Class Form_admin
         Me.Label5.Size = New System.Drawing.Size(53, 16)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Opções"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Autocarro.My.Resources.Resources.admin_ui
-        Me.PictureBox2.Location = New System.Drawing.Point(13, 12)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(45, 45)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 6
-        Me.PictureBox2.TabStop = False
         '
         'BunifuSeparator3
         '
@@ -353,6 +283,76 @@ Partial Class Form_admin
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(483, 520)
         Me.Panel2.TabIndex = 22
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.Autocarro.My.Resources.Resources.clipboard
+        Me.PictureBox7.Location = New System.Drawing.Point(22, 247)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(26, 28)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 19
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.Autocarro.My.Resources.Resources.broom
+        Me.PictureBox6.Location = New System.Drawing.Point(24, 288)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(26, 31)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 15
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Autocarro.My.Resources.Resources.logout
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 352)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(26, 31)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 13
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.Autocarro.My.Resources.Resources.check
+        Me.PictureBox5.Location = New System.Drawing.Point(21, 117)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(26, 28)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 11
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Autocarro.My.Resources.Resources.lock
+        Me.PictureBox4.Location = New System.Drawing.Point(21, 197)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(26, 28)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 10
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Autocarro.My.Resources.Resources.dinheiro
+        Me.PictureBox3.Location = New System.Drawing.Point(21, 156)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(26, 28)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 9
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Autocarro.My.Resources.Resources.admin_ui
+        Me.PictureBox2.Location = New System.Drawing.Point(13, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(45, 45)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 6
+        Me.PictureBox2.TabStop = False
         '
         'BunifuThinButton22
         '
@@ -438,11 +438,14 @@ Partial Class Form_admin
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form_admin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "you"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -450,8 +453,6 @@ Partial Class Form_admin
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

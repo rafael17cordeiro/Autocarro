@@ -226,6 +226,12 @@ Public Class Form1
                     lugares_button(i, j).Tag = 1
                 End If
 
+                If str_lugares(i)(j) = "2" Then
+                    lugares_button(i, j).Image = My.Resources.indisponivel
+                    lugares_button(i, j).Cursor = Cursors.No
+                    lugares_button(i, j).Tag = 1
+                End If
+
                 Me.Controls.Add(lugares_button(i, j))
                 AddHandler lugares_button(i, j).Click, AddressOf Selected
             Next
@@ -362,7 +368,9 @@ Public Class Form1
 
 
         ElseIf sender.tag = 1 Then
-            MsgBox("O Lugar escolhido já está ocupado ")
+            MsgBox("O Lugar escolhido já está ocupado !")
+        ElseIf sender.tag = 5 Then
+            MsgBox("O Lugar escolhido está indisponivel ! ")
         End If
     End Sub
 
