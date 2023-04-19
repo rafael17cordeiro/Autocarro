@@ -1,6 +1,6 @@
-# Autocarro
+# Bus Ticket Simulation
 
-# Autocarro Repo 🌐
+# Bus Ticket Repo 🌐
 
 **`⚒️ Still working on it `**<br>
 ### <a href="https://github.com/rafael17cordeiro/Autocarro">Autocarro</a>
