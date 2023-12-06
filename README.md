@@ -4,7 +4,7 @@ Welcome to the Bus Ticket Simulator, a simple yet powerful application built in 
 
 ![das](https://user-images.githubusercontent.com/59150464/233184029-e4f59cda-e007-4d29-b90d-b50a0abb2a88.jpg)
 
-Main Features:
+##Main Features:
 
 🎟️ **Ticket Purchase Simulation:** Experience a realistic ticket purchase process, allowing users to select seats and complete transactions.
 
